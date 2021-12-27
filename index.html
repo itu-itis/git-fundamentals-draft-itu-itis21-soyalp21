@@ -26,12 +26,25 @@
 	 
   </head>
   
-  <body>
+  <body onload="welcomeFunction(); document.body.style.backgroundColor = 'pink'"
+        onresize="document.body.style.backgroundColor = 'lightblue'"
+		
+		onkeydown="document.body.style.backgroundColor = 'white' "
+		onkeyup="document.body.style.backgroundColor = 'lightyellow' "
+		>
+		
+		<script>
+		function welcomeFunction () {
+		   alert("Welcome!");
+		}
+		
+		</script>
+		
     <p>
 	<strong>Introduction to Informative System</strong>
 	</p>
 	
-	<p class = "centered" >
+	<p class = "centered" onmouseover="document.querySelector('.centered').style.font= 'bold 20pt arial,serif'" >
 	  <em>
 	  Metin Soyalp
 	  </br>
@@ -40,18 +53,19 @@
 	</p>
 	<p>
 	  Evolution of homo species:
-	  <ul>
+	  <ul id="unorderedL" onmouseover = "document.getElementById('unorderedL').style.backgroundColor = 'purple';">
 	    <li>Homo habilis (able man)</li>
 		<li>Homo erectus (upright man)</li>
 		<li>Homo neanderthalensis</li>
 		<li>Homo oresiensis (hobbit)</li>
 		<li>Homo sapiens (wise man)</li>
-		<ul>
+		<ul id="innerUl" onclick = "document.getElementById('innerUl').style.backgroundColor = 'orange'">
 		  <li>Homo sapiens sapiens</li>
 		</ul>
 	  </ul>
 	  
-	  <h1>Human Evolution</h1>
+	  <h1 onmouseover = "this.style.color = 'orange'; style.backgroundColor = 'lightgreen'"
+	      onmouseout = "this.style.color = 'red'; style.backgroundColor = 'white'">Human Evolution</h1>
 	  
 	  <p>
 	      <img src="evolution-diagram.png">
@@ -65,7 +79,7 @@
 	  <h2>The Clickable Image</h2>
 	  
 	  <a href=" https://www.biologyonline.com/dictionary/homo-sapiens-sapiens">
-	     <img src="evolution-diagram.png">
+	     <img id="myImg" alt="Evolution Diagram" onclick="alert(document.getElementById('myImg').alt)" src="evolution-diagram.png">
 	  </a>
 	  
 	  
